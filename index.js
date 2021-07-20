@@ -1,10 +1,17 @@
+const { urlencoded } = require('express');
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const app =express();
 const port =5555;
+const  User = require('./models/user');
+
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
-app.use(express.static('./assets'));
+app.use(cookieParser());
+app.use(express.urlencoded());
 
+app.use(express.static('./assets'));
+// app.use(urlencoded);
 // we have to use layouts section before the router section
  app.use(expressLayouts);
 
