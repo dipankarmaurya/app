@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title%></title>
-    <link rel="stylesheet" href="/css/homeStyle.css">
-</head>
-<body>
+
    
     <h1>
         home page
     </h1>
+    <section>
+        <h3>post here</h3>
+        <form action="/user/post" method="POST">
+            <textarea name="content" id="post" cols="30" rows="5"></textarea>
+            <button type="submit">post</button>
+        </form>
+    </section>
     
-</body>
-</html>
+ 

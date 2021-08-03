@@ -4,6 +4,7 @@ const cookieParser = require("cookie-parser");
 const app = express();
 const port = 5555;
 const User = require("./models/user");
+const Post = require('./models/posts');
 const expressLayouts = require("express-ejs-layouts");
 const db = require("./config/mongoose");
 //used for session cookie
@@ -11,6 +12,14 @@ const session = require('express-session');
 const passport = require("passport");
 const passportLocal = require("./config/passport-local-strategy");
 const MongoStore = require('connect-mongo')(session);
+const sassMiddleware = require('node-sass-middleware');
+app.use(sassMiddleware({
+  src: './assets/SCSS',
+  dest: './assets/CSS',
+  debug: true,
+  outputStyle: 'expanded',
+  prefix:'/CSS'
+}))
 //sending form data to browser
 app.use(express.urlencoded());
 
