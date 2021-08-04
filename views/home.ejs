@@ -1,14 +1,31 @@
+<h1>home page</h1>
+<section>
+  <% if(locals.user){%>
+  <h3>post here</h3>
+  <form action="/posts/create" method="POST">
+    <textarea name="content" id="post" cols="30" rows="5"></textarea>
+    <button type="submit">post</button>
+  </form>
+  <div id="post-list-container">
+    <ul>
+      <%for(post of posts){%>
 
-   
-    <h1>
-        home page
-    </h1>
-    <section>
-        <h3>post here</h3>
-        <form action="/user/post" method="POST">
-            <textarea name="content" id="post" cols="30" rows="5"></textarea>
-            <button type="submit">post</button>
-        </form>
-    </section>
-    
- 
+      <li>
+        <p>
+          <%= post.content %>
+          <br />
+          <small>
+            <%= post.user.name%>
+            <br />
+            <%= post.user.createdAt%>
+            <br />
+            <%= post.user.email%>
+          </small>
+        </p>
+      </li>
+
+      <%}%>
+    </ul>
+  </div>
+  <%}%>
+</section>
