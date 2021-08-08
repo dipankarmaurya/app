@@ -1,6 +1,13 @@
-
-
-h1{
-    background-color: rgb(20, 2, 20);
-    color: rgb(245, 235, 235);
+#home-container{
+    display: flex;
+    #feed-post{
+        width:70% ;
+        padding: 10px
+    }
+    #users-list{
+           width:30% ;
+           height: 100%;
+           padding-left: 10px;
+           border-left: 1px solid lightgray;
+    }
 }

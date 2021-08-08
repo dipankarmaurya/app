@@ -1,8 +1,11 @@
+<link rel="stylesheet" href="/CSS/signIn.css">
 <div
-id="sign-in-form">
-<form action="/users/create-session" method="POST"> 
-      <input type="email" name="email" required,placeholder="email"><br><br>
-      <input type="password" name="password" required,placeholder="password"><br><br>
-      <button type="submit">Sign-in</button>
-</form>
+id="form-container">
+<div id="sign-in">
+      <form action="/users/create-session" method="POST"> 
+            <input type="email" name="email" placeholder="Email.."required><br><br>
+            <input type="password" name="password" required placeholder="Password.."><br><br>
+            <button type="submit" id ="button">Sign-in</button>
+      </form>
+</div>
 </div>
